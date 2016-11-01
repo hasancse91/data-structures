@@ -1,3 +1,8 @@
+/*
+Stack implementation with Array
+Code written by Hasan Abdullah
+Contact: hellohasan.com
+*/
 #include<stdio.h>
 #define stackSize 100
 
