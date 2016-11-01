@@ -7,3 +7,4 @@ Enjoy! :)
 
 #### Linear Data Structure:
 - [Stack] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Stack%20Implementation%20in%20C.cpp)
+- [Queue] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Queue%20Implementation%20in%20C.cpp)
