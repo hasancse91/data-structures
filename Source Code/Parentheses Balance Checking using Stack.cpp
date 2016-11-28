@@ -1,3 +1,9 @@
+/*
+Parentheses Balance checking using STACK data structure in C++
+Code written by Hasan Abdullah
+Contact: hellohasan.com
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
