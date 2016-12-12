@@ -1,3 +1,11 @@
+/*
+    Infix notation to Postfix notation conversion.
+    Postfix notation evaluation to get result of that expression.
+    Using stack data structure in C++ language.
+    Programmed by Hasan Abdullah
+    Contact: http://hellohasan.com
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -26,6 +34,7 @@ int main()
     return 0;
 }
 
+//INFIX to POSTFIX conversion
 string convertInfixToPostfix(string infix)
 {
     string postfix = "";
@@ -85,6 +94,8 @@ string convertInfixToPostfix(string infix)
     return postfix;
 }
 
+
+// POSTFIX evaluation to get result
 int evaluatePostfixExpression(string postfix)
 {
     stack <int> myStack;
@@ -111,6 +122,8 @@ int evaluatePostfixExpression(string postfix)
     return myStack.top();
 }
 
+
+// Calculation, according to arithmetic operator sign
 int calculate(int a, int b, char operatorSign)
 {
     if(operatorSign=='+')
@@ -126,6 +139,8 @@ int calculate(int a, int b, char operatorSign)
 
 }
 
+
+// Operator precedence. You can add more operator like % (MOD)
 int operatorPrecedence(char ch)
 {
     if(ch=='^')
