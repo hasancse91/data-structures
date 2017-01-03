@@ -1,3 +1,9 @@
+/*
+    Deque - Double-Ended Queue implementation with C++ STL
+    Programmed by Hasan Abdullah
+    Contact: http://hellohasan.com
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;

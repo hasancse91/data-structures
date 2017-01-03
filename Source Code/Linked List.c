@@ -1,3 +1,10 @@
+/*
+    Singly Linked List implementation
+    Using C language.
+    Programmed by Hasan Abdullah
+    Contact: http://hellohasan.com
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #define NULL 0
