@@ -13,3 +13,6 @@ Enjoy! :)
 - [Deque – Double-Ended Queue] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Deque%20-%20Double%20Ended%20Queue.cpp)
 - [Linked List: Create, Print and Count the Item] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Linked%20List.c)
 - [Linked List: Create, Insert, Search, Delete and Print operation] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Linked%20List%20%5Bcreate%2C%20insert%2C%20delete%2C%20search%5D.c)
+
+#### Non-Linear Data Structure:
+- [Tree - Binary Search Tree [BST]] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Binary%20Search%20Tree%20%5BInsert-Search-Traverse%5D%20.c)
