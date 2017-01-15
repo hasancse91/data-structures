@@ -159,6 +159,7 @@ void insert_after(int key, int value)
 
 }
 
+
 void delete_item(int value)
 {
     node *myNode = head, *previous=NULL;
@@ -187,6 +188,7 @@ void delete_item(int value)
         printf("Key not found!\n");
 }
 
+
 void search_item(int value)
 {
     node *searchNode = head;
@@ -208,6 +210,7 @@ void search_item(int value)
         printf("Item not found\n");
 
 }
+
 
 void print_linked_list()
 {
