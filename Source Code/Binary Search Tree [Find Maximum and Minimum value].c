@@ -1,3 +1,10 @@
+/*
+    Binary Search Tree - BST implementation Using C language.
+    Find maximum and minimum value of a BST
+    Programmed by Hasan Abdullah
+    Contact: http://hellohasan.com
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
