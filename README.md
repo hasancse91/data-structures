@@ -16,4 +16,4 @@ Enjoy! :)
 
 #### Non-Linear Data Structure:
 - [Tree - Binary Search Tree - BST [Insert, Search and Traversal]] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Binary%20Search%20Tree%20%5BInsert-Search-Traverse%5D%20.c)
-- [Tree – Binary Search Tree – BST [Find Maximum and Minimum value] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Binary%20Search%20Tree%20%5BFind%20Maximum%20and%20Minimum%20value%5D.c)
+- [Tree – Binary Search Tree – BST [Find Maximum and Minimum value]] (https://github.com/hasancse91/data-structures/blob/master/Source%20Code/Binary%20Search%20Tree%20%5BFind%20Maximum%20and%20Minimum%20value%5D.c)
