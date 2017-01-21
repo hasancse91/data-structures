@@ -68,7 +68,7 @@ int main()
 node * findMinRecursive(node *root)
 {
     if(root->leftChild==NULL)
-        return root->number;
+        return root;
 
     return findMinRecursive(root->leftChild);
 }
