@@ -64,6 +64,8 @@ void insertNode(int value)
 
     tempNode = (node *) malloc(sizeof(node));
     tempNode->number = value;
+    tempNode->leftChild = NULL;
+    tempNode->rightChild = NULL;
 
     //For the very first call
     if(root==NULL)
