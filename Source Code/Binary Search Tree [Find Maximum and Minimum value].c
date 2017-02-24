@@ -140,6 +140,8 @@ void insertNodeIterative(int value)
 
     tempNode = (node *) malloc(sizeof(node));
     tempNode->number = value;
+    tempNode->leftChild = NULL;
+    tempNode->rightChild = NULL;
 
     //For the very first call
     if(root==NULL)
@@ -150,6 +152,8 @@ void insertNodeIterative(int value)
     {
         currentNode = root;
         parentNode = NULL;
+        parentNode->leftChild = NULL;
+        parentNode->rightChild = NULL;
 
         while(1)
         {

@@ -59,8 +59,8 @@ int main()
 void insertNode(int value)
 {
     node *tempNode;
-    node *currentNode=NULL;
-    node *parentNode=NULL;
+    node *currentNode;
+    node *parentNode;
 
     tempNode = (node *) malloc(sizeof(node));
     tempNode->number = value;
@@ -76,6 +76,8 @@ void insertNode(int value)
     {
         currentNode = root;
         parentNode = NULL;
+        parentNode->leftChild = NULL;
+        parentNode->rightChild = NULL;
 
         while(1)
         {
