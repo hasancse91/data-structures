@@ -183,8 +183,6 @@ void insertNode(int value)
     {
         currentNode = root;
         parentNode = NULL;
-        parentNode->leftChild = NULL;
-        parentNode->rightChild = NULL;
 
         while(1)
         {
