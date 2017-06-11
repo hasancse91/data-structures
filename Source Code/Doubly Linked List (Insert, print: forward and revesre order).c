@@ -21,18 +21,26 @@ node *head=NULL, *tail=NULL;
 node* getNewNode(int val);
 void insert_at_tail(int value);
 void insert_at_first(int value);
+void insert_at_middle(int value, int position);
 void printLinkedListForward();
-
+void printLinkedListBackward();
 
 int main()
 {
     int a = 5, b = 15, c = 43, d = 23, e = 12, f = 66, g = 99, h =65, i = 20, j = 8;
+    int pos = 2, insertMidValue = 500;
 
     //Create a linked list
     printf("Insert nodes at tail: %d, %d, %d\n", a, b, c);
     insert_at_tail(a);
     insert_at_tail(b);
     insert_at_tail(c);
+
+    //print the list forward
+    printLinkedListForward();
+
+    printf("Insert node: %d at middle. Position: %d\n", insertMidValue, pos);
+    insert_at_middle(insertMidValue, pos); //here midValue = 500 and pos = 2
 
     //print the list forward
     printLinkedListForward();
@@ -126,6 +134,38 @@ void insert_at_first(int value)
     head->previous = newNode; //before, the previous node of head was NULL. but now newNode
 
     head = newNode; //update the global node 'head' by newNode
+}
+
+void insert_at_middle(int value, int position)
+{
+    node *newNode = getNewNode(value);
+
+    if(head==NULL) //For the 1st element
+    {
+        //For now, newNode is the only one node of list
+        //So it it is head and also tail
+        head=newNode;
+        tail=newNode;
+        return;
+    }
+
+    node *temp = (node *) malloc(sizeof(node));
+    temp = head;
+    int i = 1;
+
+    //find the position where our newNode will put
+    while((i < position-1) && temp->next!=NULL){
+        temp = temp->next;
+        i++;
+    }
+
+    newNode->next = temp->next; //newNode's next node will be the next node of temp
+    newNode->previous = temp; //newNode's previous node will be the temp node
+
+    if(temp->next)
+        temp->next->previous = newNode; //newNode will be the previous node of temp->next node
+
+    temp->next = newNode; //update the next node of temp
 }
 
 void printLinkedListForward()
