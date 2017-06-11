@@ -1,7 +1,7 @@
 /*
     Doubly Linked List implementation by C programming Language
-    Operations: create list, insert item to tail, insert item to first,
-    print list forward order, print list reverse order
+    Operations: create list, insert item to tail, insert item to first, insert item to middle position,
+    	print list forward order, print list reverse order
     Programmed by: Hasan Abdullah
     Contact: http://hellohasan.com/
 */
