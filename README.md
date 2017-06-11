@@ -1,6 +1,9 @@
 ﻿# Data Structures
 
-In this repository I'll add all of my data structures implementations. Most of Algorithms are implemented by C programming language.
+In this repository I'll add all of my data structures implementations. Most of them are implemented by C programming language.
+
+If you know Bengali go to my personal blog site for tutorials on these topics: http://hellohasan.com/category/data-structure/
+
 Enjoy! :)
 
 ### **Data Structures List:**
