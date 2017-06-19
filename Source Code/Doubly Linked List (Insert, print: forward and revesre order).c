@@ -7,6 +7,7 @@
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 struct linked_list
 {
