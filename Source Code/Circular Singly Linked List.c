@@ -23,14 +23,14 @@ void insert_at_tail(int number);
 void insert_at_middle(int number, int position);
 void delete_head();
 void delete_tail();
-void delete_middle_node(int position);
+void delete_middle(int posision);
 void print_list();
 int getListLength();
 
 int main()
 {
     int a = 5, b = 15, c = 43, d = 23, e = 12, f = 66, g = 99, h =65, i = 20, j = 8;
-    int pos = 2, insertMidValue = 500, deletePos = 4;
+    int pos = 2, insertMidValue = 500, deletePos = 5;
 
     printf("Insert at head: %d\n", a);
     insert_at_head(a);
@@ -42,6 +42,12 @@ int main()
     insert_at_tail(b);
     insert_at_tail(c);
     insert_at_tail(d);
+
+    printf("Updated Full list:\n");
+    print_list();
+
+    printf("Delete HEAD\n");
+    delete_head();
 
     printf("Updated Full list:\n");
     print_list();
@@ -58,10 +64,22 @@ int main()
     printf("Updated Full list:\n");
     print_list();
 
+    printf("Delete TAIL\n");
+    delete_tail();
+
+    printf("Updated Full list:\n");
+    print_list();
+
     printf("Insert at tail: %d, %d, %d\n", f, g, h);
     insert_at_tail(f);
     insert_at_tail(g);
     insert_at_tail(h);
+
+    printf("Updated Full list:\n");
+    print_list();
+
+    printf("Delete from POSITION: %d\n", deletePos);
+    delete_middle(deletePos);
 
     printf("Updated Full list:\n");
     print_list();
@@ -151,6 +169,78 @@ void insert_at_middle(int number, int position)
     }
 
     printf("Position does not exist!\n");
+}
+
+// Delete HEAD node of a circular singly linked list
+void delete_head()
+{
+    if(head==NULL)  return;
+
+    node *temp = head;
+
+    tail->next = head->next;
+    head = head->next;
+
+    free(temp);
+}
+
+// Delete TAIL node of a circular singly linked list
+void delete_tail()
+{
+    if(head==NULL)  return;
+
+    node *temp = head;
+    node *current = head;
+
+    while(current->next != head)
+    {
+        temp = current;
+        current = current->next;
+    }
+    // now, `current` node is TAIL. `temp` is the previous node of TAIL.
+    // `current->next` is HEAD
+
+    temp->next = current->next;
+    tail = temp;
+    free(current);
+}
+
+// Delete a node middle in the circular singly linked list
+void delete_middle(int position)
+{
+    if(head==NULL)  return;
+
+    if(position==1)
+    {
+        delete_head();
+        return;
+    }
+
+    node *current = head;
+    node *temp;
+    int count = 0;
+
+    do
+    {
+        count++;
+        temp = current;
+        current = current->next;
+    }   while(current->next != head && count<position-1);
+
+    if(count==position-1)
+    {
+        if(current==tail)
+        {
+            delete_tail();
+            return;
+        }
+
+        temp->next = current->next;
+        free(current);
+        return;
+    }
+
+    printf("Position (%d) does not exist!\n", position);
 }
 
 // Print all node's data of a circular singly linked list
