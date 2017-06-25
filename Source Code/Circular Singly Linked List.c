@@ -160,8 +160,8 @@ void insert_at_middle(int number, int position)
                 node *newNode = (node *) malloc(sizeof(node));
                 newNode->number = number;
 
-                newNode->next = temp->next;
                 temp->next = newNode;
+                newNode->next = current;
             }
             return;
         }
@@ -197,10 +197,10 @@ void delete_tail()
         temp = current;
         current = current->next;
     }
-    // now, `current` node is TAIL. `temp` is the previous node of TAIL.
+    // now, `current` node is the TAIL. `temp` is the previous node of TAIL.
     // `current->next` is HEAD
 
-    temp->next = current->next;
+    temp->next = head; //also can write temp->next = current->next;
     tail = temp;
     free(current);
 }
