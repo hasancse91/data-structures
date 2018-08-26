@@ -149,6 +149,7 @@ void insert_after(int key, int value)
 
             flag = 1;
 
+
             break;
         }
         else
@@ -178,6 +179,7 @@ void delete_item(int value)
             printf("%d is deleted from list\n", value);
 
             flag = 1;
+            free(myNode); //need to free up the memory to prevent memory leak
             break;
         }
 
