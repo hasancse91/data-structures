@@ -82,7 +82,7 @@ node * deleteNode(node *currentNode, int value)
 
     return currentNode;
 }
-
+m
 node * findMinimum(node *currentNode)
 {
     if(currentNode->leftChild==NULL)
