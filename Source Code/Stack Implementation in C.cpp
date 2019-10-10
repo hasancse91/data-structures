@@ -4,7 +4,7 @@ Code written by Hasan Abdullah
 Contact: hellohasan.com
 */
 #include<stdio.h>
-#define stackSize 3
+#define stackSize 4
 
 int myStack[stackSize], top = -1;
 
@@ -53,6 +53,7 @@ int main()
     push(5);
     push(90);
     push(12);
+    push(12);   //Just to let know works on same elements also
 
     displayStack();
 
