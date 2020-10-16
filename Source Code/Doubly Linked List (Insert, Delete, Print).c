@@ -9,6 +9,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 struct linked_list
 {
@@ -27,6 +28,7 @@ void insert_at_middle(int value, int position);
 void deleteNode(int position);
 void printLinkedListForward();
 void printLinkedListBackward();
+bool isValueAvailable(int value);
 
 
 int main()
@@ -90,7 +92,13 @@ int main()
 
     //print the list backward
     printLinkedListBackward();
-
+    
+    //Searching the value in the list
+    int value = h;
+    if(isValueAvailable(value) == true)
+        printf("%d found in the list.\n\n", value);
+    else
+        printf("%d not found in the list.\n\n", value);
     return 0;
 }
 
@@ -272,4 +280,22 @@ void printLinkedListBackward()
         myList = myList->previous;
     }
     puts("\n");
+}
+
+//This function search the value in the list
+bool isValueAvailable(int value)
+{
+    node *p = head;
+    while(p != NULL)
+    {
+        if(p->number == value)
+        {
+            return true;
+        }
+        else
+        {
+            p = p->next;
+        }
+    }
+    return 0;
 }
