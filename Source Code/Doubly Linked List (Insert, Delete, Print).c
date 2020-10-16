@@ -27,6 +27,7 @@ void insert_at_middle(int value, int position);
 void deleteNode(int position);
 void printLinkedListForward();
 void printLinkedListBackward();
+int search(int value);
 
 
 int main()
@@ -90,7 +91,13 @@ int main()
 
     //print the list backward
     printLinkedListBackward();
-
+    
+    //Searching the value in the list
+    int value = 10;
+    if(search(value) == 1)
+        printf("%d found in the list.\n\n", value);
+    else
+        printf("%d not found in the list.\n\n", value);
     return 0;
 }
 
@@ -272,4 +279,22 @@ void printLinkedListBackward()
         myList = myList->previous;
     }
     puts("\n");
+}
+
+//This function search the value in the list
+int search(int value)
+{
+    node *p = head;
+    while(p != NULL)
+    {
+        if(p->number == value)
+        {
+            return 1;
+        }
+        else
+        {
+            p = p->next;
+        }
+    }
+    return 0;
 }
