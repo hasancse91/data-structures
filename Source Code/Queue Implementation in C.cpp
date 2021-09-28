@@ -19,7 +19,7 @@ void enqueue(int value)
 
 void dequeue()
 {
-    if(front==queueSize)
+    if(front>rear)
         printf("Queue is empty!\n");
     else
         printf("Dequeued value: %d\n", myQueue[front++]);
